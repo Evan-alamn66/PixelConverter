@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top to allow more space for content */
+    min-height: 100vh;
+    background-color: #222;
+    color: #eee;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 900px; /* Limit width for better readability */
+    width: 100%;
+}
+
+h1 {
+    color: #0f0;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 255, 0, 0.5);
+}
+
+.controls {
+    margin-bottom: 20px;
+    background-color: #444;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.controls label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.controls input[type="file"] {
+    background-color: #555;
+    color: #eee;
+    border: 1px solid #777;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.controls input[type="range"] {
+    width: 150px;
+    -webkit-appearance: none;
+    height: 8px;
+    background: #777;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+.controls input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #0f0;
+    cursor: pointer;
+}
+
+.controls button {
+    background-color: #0f0;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #0c0;
+}
+
+.video-canvas-container {
+    position: relative;
+    width: 100%;
+    max-width: 640px; /* Example max width for video/canvas */
+    margin: 0 auto;
+    border: 2px solid #0f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#pixelCanvas {
+    background-color: #1a1a1a;
+    display: block; /* Remove extra space below canvas */
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Hide the original video, we only use it for its frames */
+#sourceVideo {
+    display: none;
+}
